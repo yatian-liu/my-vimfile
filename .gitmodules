@@ -1,0 +1,24 @@
+[submodule "pack/color/start/vim-colors-solarized"]
+	path = pack/color/start/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized
+[submodule "pack/language/start/vimtex"]
+	path = pack/language/start/vimtex
+	url = https://github.com/lervag/vimtex
+[submodule "pack/other/start/fcitx.vim"]
+	path = pack/other/start/fcitx.vim
+	url = https://github.com/lilydjwg/fcitx.vim
+[submodule "pack/other/opt/vim-wayland-clipboard"]
+	path = pack/other/opt/vim-wayland-clipboard
+	url = https://github.com/jasonccox/vim-wayland-clipboard
+[submodule "pack/other/start/vim-easymotion"]
+	path = pack/other/start/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion
+[submodule "pack/other/start/vim-bufkill"]
+	path = pack/other/start/vim-bufkill
+	url = https://github.com/qpkorr/vim-bufkill
+[submodule "pack/other/start/vim-sleuth"]
+	path = pack/other/start/vim-sleuth
+	url = https://github.com/tpope/vim-sleuth
+[submodule "pack/other/start/vim-sensible"]
+	path = pack/other/start/vim-sensible
+	url = https://github.com/tpope/vim-sensible
