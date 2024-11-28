@@ -22,3 +22,9 @@
 [submodule "pack/other/start/vim-sensible"]
 	path = pack/other/start/vim-sensible
 	url = https://github.com/tpope/vim-sensible
+[submodule "pack/language/start/rust.vim"]
+	path = pack/language/start/rust.vim
+	url = https://github.com/rust-lang/rust.vim
+[submodule "pack/language/opt/lsp"]
+	path = pack/language/opt/lsp
+	url = https://github.com/yegappan/lsp

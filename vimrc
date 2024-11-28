@@ -1,10 +1,13 @@
 " Get the defaults that most users want.
-source $VIMRUNTIME/vimrc_example.vim
+" source $VIMRUNTIME/vimrc_example.vim
 
 " Load sensible.vim early so we can override its settings.
 runtime! plugin/sensible.vim
 
 " Custom configurations.
+
+set undofile " enable persistent undo
+set undodir=~/.vim/undodir
 
 set number " display line number
 
@@ -132,6 +135,29 @@ let g:EasyMotion_smartcase = 1
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 " End of easymotion settings.
+
+
+" Settings for LSP server and Rust.
+packadd lsp
+" Clangd language server
+call LspAddServer([#{
+	\    name: 'clangd',
+	\    filetype: ['c', 'cpp'],
+	\    path: '/usr/bin/clangd',
+	\    args: ['--background-index']
+	\  }])
+" Rust language server
+call LspAddServer([#{
+	\    name: 'rustlang',
+	\    filetype: ['rust'],
+	\    path: '/usr/lib/rustup/bin/rust-analyzer',
+	\    args: [],
+	\    syncInit: v:true
+	\  }])
+
+" Let Vim treat Rust library files as readonly.
+autocmd BufReadPre */lib/rustlib/src/rust/library/* setlocal readonly
+autocmd BufReadPre */.cargo/registry/src/* setlocal readonly
 
 " If in a wayland session, enable vim-wayland-clipboard.
 if $WAYLAND_DISPLAY != ""
